@@ -1,0 +1,617 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("XXX SUPER XXX GUI", "BloodTheme")
+
+--windows
+
+local Tab = Window:NewTab("Scripts")
+local Section = Tab:NewSection("YOOO")
+
+--buttons
+
+Section:NewButton("Bar Rainbow", "WHAT!", function()
+    
+local player = game:GetService("Players").LocalPlayer
+local mainScreenGui = player.PlayerGui.MainScreenGui
+local bar = mainScreenGui.Bar
+
+local TweenService = game:GetService("TweenService")
+
+local function updateRainbowColor(bar)
+    local hue = 0
+    while true do
+        local color = Color3.fromHSV(hue, 1, 1)
+        local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
+        local goal = {BackgroundColor3 = color}
+
+        local tween = TweenService:Create(bar, tweenInfo, goal)
+        tween:Play()
+
+        hue = (hue + 0.01) % 1
+        wait(0.1)
+    end
+end
+
+spawn(function()
+    updateRainbowColor(bar.HP.bar)
+end)
+
+
+local player = game:GetService("Players").LocalPlayer
+local mainScreenGui = player.PlayerGui.MainScreenGui
+local bar = mainScreenGui.Bar
+
+local TweenService = game:GetService("TweenService")
+
+local function updateRainbowColor(bar)
+    local hue = 0
+    while true do
+        local color = Color3.fromHSV(hue, 1, 1)
+        local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
+        local goal = {BackgroundColor3 = color}
+
+        local tween = TweenService:Create(bar, tweenInfo, goal)
+        tween:Play()
+
+        hue = (hue + 0.01) % 1
+        wait(0.1)
+    end
+end
+
+spawn(function()
+    updateRainbowColor(bar.Energy.bar)
+end)
+
+
+local player = game:GetService("Players").LocalPlayer
+local mainScreenGui = player.PlayerGui.MainScreenGui
+local bar = mainScreenGui.Bar
+
+local TweenService = game:GetService("TweenService")
+
+local function updateRainbowColor(bar)
+    local hue = 0
+    while true do
+        local color = Color3.fromHSV(hue, 1, 1)
+        local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
+        local goal = {BackgroundColor3 = color}
+
+        local tween = TweenService:Create(bar, tweenInfo, goal)
+        tween:Play()
+
+        hue = (hue + 0.01) % 1
+        wait(0.1)
+    end
+end
+
+spawn(function()
+    updateRainbowColor(bar.Armor.bar)
+end)
+
+
+game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Bar.Energy.TextLabel.Text = "XXX SUPER XXX"
+
+
+game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Bar.HP.TextLabel.Text = "XXX SUPER XXX"
+
+
+game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Bar.Armor.TextLabel.Text = "XXX SUPER XXX"
+
+
+-- ط·آ§ط¸â€‍ط·آ­ط·آµط¸ث†ط¸â€‍ ط·آ¹ط¸â€‍ط¸â€° ط·آ§ط¸â€‍ط¸â€‍ط·آ§ط·آ¹ط·آ¨ ط·آ§ط¸â€‍ط¸â€¦ط·آ­ط¸â€‍ط¸ظ¹
+local player = game:GetService("Players").LocalPlayer
+
+-- ط·آ§ط¸â€‍ط·آ­ط·آµط¸ث†ط¸â€‍ ط·آ¹ط¸â€‍ط¸â€° ط¸ث†ط·آ§ط·آ¬ط¸â€،ط·آ© ط·آ§ط¸â€‍ط¸â€¦ط·آ³ط·ع¾ط·آ®ط·آ¯ط¸â€¦ ط·آ§ط¸â€‍ط·آ®ط·آ§ط·آµط·آ© ط·آ¨ط·آ§ط¸â€‍ط¸â€‍ط·آ§ط·آ¹ط·آ¨
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- ط·آ§ط¸â€‍ط·آ­ط·آµط¸ث†ط¸â€‍ ط·آ¹ط¸â€‍ط¸â€° ط·آ§ط¸â€‍ط·آ´ط·آ§ط·آ´ط·آ© ط·آ§ط¸â€‍ط·آ±ط·آ¦ط¸ظ¹ط·آ³ط¸ظ¹ط·آ© ط·آ§ط¸â€‍ط·ع¾ط¸ظ¹ ط·ع¾ط·آ­ط·ع¾ط¸ث†ط¸ظ¹ ط·آ¹ط¸â€‍ط¸â€° ط·آ§ط¸â€‍ط·آ£ط·آ´ط·آ±ط·آ·ط·آ©
+local mainScreenGui = playerGui:WaitForChild("MainScreenGui")
+
+-- ط·ع¾ط·آ­ط·آ¯ط¸ظ¹ط·آ¯ ط·آ§ط¸â€‍ط¸â€‍ط¸ث†ط¸â€  ط·آ§ط¸â€‍ط·آ¬ط·آ¯ط¸ظ¹ط·آ¯
+local newColor = Color3.fromRGB(255, 0, 0)  -- ط¸ظ¹ط¸â€¦ط¸ئ’ط¸â€ ط¸ئ’ ط·ع¾ط·ط›ط¸ظ¹ط¸ظ¹ط·آ± ط¸â€،ط·آ°ط¸â€، ط·آ§ط¸â€‍ط¸â€ڑط¸ظ¹ط¸â€¦ ط¸â€‍ط¸â€‍ط¸ث†ط¸â€  ط·آ§ط¸â€‍ط·آ°ط¸ظ¹ ط·ع¾ط·آ±ط¸ظ¹ط·آ¯ط¸â€،
+-- ط·ع¾ط·ط›ط¸ظ¹ط¸ظ¹ط·آ± ط¸â€‍ط¸ث†ط¸â€  ط·آ´ط·آ±ط¸ظ¹ط·آ· ط·آ§ط¸â€‍ط·آ·ط·آ§ط¸â€ڑط·آ©
+local HPBar = mainScreenGui:FindFirstChild("HP", true)
+if HPBar and HPBar:IsA("Frame") then
+    HPBar.BackgroundColor3 = newColor
+    print("Changed Color Of HP Bar")
+else
+    print("HP bar not found or is not a Frame")
+end
+
+local EnergyBar = mainScreenGui:FindFirstChild("Energy", true)
+if EnergyBar and EnergyBar:IsA("Frame") then
+    EnergyBar.BackgroundColor3 = newColor
+    print("Changed Color Of Energy Bar")
+else
+    print("Energy bar not found or is not a Frame")
+end
+
+local ArmorBar = mainScreenGui:FindFirstChild("Armor", true)
+if ArmorBar and ArmorBar:IsA("Frame") then
+    ArmorBar.BackgroundColor3 = newColor
+    print("Changed Color Of Armor Bar")
+else
+    print("Armor bar not found or is not a Frame")
+end
+end)
+
+Section:NewButton("desnyc resolver", "ButtonInfo", function()
+    getgenv().VelocityChanger = true
+getgenv().Velocity = Vector3.new(0,-500,0)
+
+local Players     = game:GetService("Players")
+local RunService  = game:GetService("RunService")
+
+local LocalPlayer = Players.LocalPlayer
+local Character   = LocalPlayer.Character
+local RootPart    = Character:FindFirstChild("HumanoidRootPart")
+
+local Heartbeat, RStepped, Stepped = RunService.Heartbeat, RunService.RenderStepped, RunService.Stepped
+
+LocalPlayer.CharacterAdded:Connect(function(NewCharacter)
+   Character = NewCharacter
+end)
+
+local RVelocity, YVelocity = nil, 0.1
+
+while true do
+   if VelocityChanger then
+       if (not RootPart) or (not RootPart.Parent) or (not RootPart.Parent.Parent) then
+           warn("weird ahh died")
+           RootPart = Character:FindFirstChild("HumanoidRootPart")
+       else
+           RVelocity = RootPart.Velocity
+   
+           RootPart.Velocity = type(Velocity) == "vector" and Velocity or Velocity(RVelocity)
+       
+           RStepped:wait()
+       
+           RootPart.Velocity = RVelocity
+       end
+   end
+   
+   Heartbeat:wait()
+end
+end)
+
+Section:NewButton("AntiLock", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/G5sygbvb"))()
+end)
+
+Section:NewButton("no texture", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/0Es82PAJ"))()
+end)
+
+Section:NewButton("Ultra instinct", "ButtonInfo", function()
+
+local player = game:GetService("Players").LocalPlayer
+
+-- طھط¹ظٹظٹظ† ط§ظ„ظ…ط³ط§ظپط© ظ„ظ„ط­ط±ظƒط©
+local distance = 4
+
+while true do
+    -- ط§ظ„ط§ظ†طھظ‚ط§ظ„ ط¥ظ„ظ‰ ط§ظ„ظٹظ…ظٹظ†
+    player.Character:SetPrimaryPartCFrame(player.Character.HumanoidRootPart.CFrame * CFrame.new(distance, 0, 0))
+    wait()
+
+    -- ط§ظ„ط§ظ†طھظ‚ط§ظ„ ط¥ظ„ظ‰ ط§ظ„ظٹط³ط§ط±
+    player.Character:SetPrimaryPartCFrame(player.Character.HumanoidRootPart.CFrame * CFrame.new(-distance, 0, 0))
+    wait()
+
+end
+end)
+
+Section:NewButton("Crazy Anti!", "ButtonInfo", function()
+
+loadstring(game:HttpGet("https://Pastebin.com/raw/gcjxDzhY"))()
+end)
+
+Section:NewButton("Camlock mob and pc", "ButtonInfo", function()
+getgenv().ScriptSettings = {
+    Enabled = true,
+    Prediction = 0.1211,
+    HitscanPriority = "Head",
+    FOV = 200, -- of ur on mobile do it on 200
+    Scan = true,
+    JumpOffset = 0.09, -- jump offset, ill make a video on this one
+    TargetStrafeSettings = {
+        Enabled = false,
+        GiveTool = false,
+        Speed = 1,
+        Height = 0,
+        Distance = 7
+    },
+    CameraLock = {
+        Enabled = true,
+        Smoothing = 0.5
+    }
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7dd05d66b1acebfeec4fb31431a601eb.lua"))()
+end)
+
+Section:NewButton("Swords", "ButtonInfo", function()
+
+   loadstring(game:HttpGet("https://pastebin.com/raw/AZVi2tuK"))()
+end)
+
+
+Section:NewButton("ForceReset", "ButtonInfo", function()
+
+    game.Players.LocalPlayer.Character.Head:Destroy()
+end)
+
+
+Section:NewButton("Fly For Mob And Pc", "ButtonInfo", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/dahoodios/main/hoodcustomfly", true))()
+
+end)
+
+
+Section:NewButton("SpeedWalk", "ButtonInfo", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox-Scripts/main/Tpwalk%20V4%20%5B%20BETA%20%5D.lua", true))()
+
+end)
+
+
+Section:NewButton("Another bar Rainbow", "ButtonInfo", function()
+
+local player = game:GetService("Players").LocalPlayer
+local mainScreenGui = player.PlayerGui.MainScreenGui
+local bar = mainScreenGui.Bar
+
+local TweenService = game:GetService("TweenService")
+
+-- ط¯ط§ظ„ط© ظ„طھط؛ظٹظٹط± ط§ظ„ط£ظ„ظˆط§ظ† ط¨ط´ظƒظ„ ظ…طھط¯ط±ط¬ ط¥ظ„ظ‰ ظ‚ظˆط³ ظ‚ط²ط­
+local function updateRainbowColor(bar)
+    local hue = 0
+    while true do
+        local color = Color3.fromHSV(hue, 1, 1)
+        local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
+        local goal = {BackgroundColor3 = color}
+
+        local tween = TweenService:Create(bar, tweenInfo, goal)
+        tween:Play()
+
+        hue = (hue + 0.01) % 1 -- طھط¹ط¯ظٹظ„ ظ‡ط°ظ‡ ط§ظ„ظ‚ظٹظ…ط© ظ„طھط؛ظٹظٹط± ط³ط±ط¹ط© ط§ظ„طھط£ط«ظٹط±
+        wait(0.1) -- طھط¹ط¯ظٹظ„ ظ‡ط°ط§ ظ„طھط؛ظٹظٹط± ط³ط±ط¹ط© ط§ظ„طھط­ط¯ظٹط«
+    end
+end
+
+-- ط¯ط§ظ„ط© ظ„طھط؛ظٹظٹط± ط£ظ„ظˆط§ظ† ط§ظ„ظ†طµظˆطµ ط¨ط´ظƒظ„ ظ…طھط¯ط±ط¬ ط¥ظ„ظ‰ ظ‚ظˆط³ ظ‚ط²ط­
+local function updateRainbowTextColor(textLabel)
+    local hue = 0
+    while true do
+        local color = Color3.fromHSV(hue, 1, 1)
+        textLabel.TextColor3 = color
+        hue = (hue + 0.01) % 1 -- طھط¹ط¯ظٹظ„ ظ‡ط°ظ‡ ط§ظ„ظ‚ظٹظ…ط© ظ„طھط؛ظٹظٹط± ط³ط±ط¹ط© ط§ظ„طھط£ط«ظٹط±
+        wait(0.1) -- طھط¹ط¯ظٹظ„ ظ‡ط°ط§ ظ„طھط؛ظٹظٹط± ط³ط±ط¹ط© ط§ظ„طھط­ط¯ظٹط«
+    end
+end
+
+-- طھط­ط¯ظٹط¯ ط´ط±ظٹط· ط§ظ„طµط­ط©
+local HPBar = mainScreenGui:FindFirstChild("HP", true)
+if HPBar and HPBar:IsA("Frame") then
+    spawn(function()
+        updateRainbowColor(HPBar)
+    end)
+    local hpTextLabel = HPBar:FindFirstChild("TextLabel", true)
+    if hpTextLabel then
+        hpTextLabel.Text = "CRAZE.LOL"
+        spawn(function()
+            updateRainbowTextColor(hpTextLabel)
+        end)
+    end
+    print("Changed Color Of HP Bar")
+else
+    print("HP bar not found or is not a Frame")
+end
+
+-- طھط­ط¯ظٹط¯ ط´ط±ظٹط· ط§ظ„ط·ط§ظ‚ط©
+local EnergyBar = mainScreenGui:FindFirstChild("Energy", true)
+if EnergyBar and EnergyBar:IsA("Frame") then
+    spawn(function()
+        updateRainbowColor(EnergyBar)
+    end)
+    local energyTextLabel = EnergyBar:FindFirstChild("TextLabel", true)
+    if energyTextLabel then
+        energyTextLabel.Text = "CRAZE.LOL"
+        spawn(function()
+            updateRainbowTextColor(energyTextLabel)
+        end)
+    end
+    print("Changed Color Of Energy Bar")
+else
+    print("Energy bar not found or is not a Frame")
+end
+
+-- طھط­ط¯ظٹط¯ ط´ط±ظٹط· ط§ظ„ط¯ط±ط¹
+local ArmorBar = mainScreenGui:FindFirstChild("Armor", true)
+if ArmorBar and ArmorBar:IsA("Frame") then
+    spawn(function()
+        updateRainbowColor(ArmorBar)
+    end)
+    local armorTextLabel = ArmorBar:FindFirstChild("TextLabel", true)
+    if armorTextLabel then
+        armorTextLabel.Text = "CRAZE.LOL"
+        spawn(function()
+            updateRainbowTextColor(armorTextLabel)
+        end)
+    end
+    print("Changed Color Of Armor Bar")
+else
+    print("Armor bar not found or is not a Frame")
+
+end
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Whos this!";
+    Text = "Someones Nigga uses my script nooo😭😭";
+    Duration = 20;
+})
+
+end
+
+Section:NewButton("Aimlock", "WHAT!", function()
+
+getgenv().keytoclick = "Q"
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name ="XxxSuperxxX"
+tool.Activated:connect(function()
+    local vim = game:service("VirtualInputManager")
+vim:SendKeyEvent(true, keytoclick, false, game)
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "DaGreenLionn#8329";
+    Text = "brrrr skibidi dop dop dop dop yes yes yes";
+
+})
+
+local player = game.Players.LocalPlayer
+
+local function connectCharacterAdded()
+    player.CharacterAdded:Connect(onCharacterAdded)
+end
+
+connectCharacterAdded()
+
+player.CharacterRemoving:Connect(function()
+    tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+getgenv().Key = Enum.KeyCode.Q
+getgenv().Prediction = 0.135
+getgenv().Partz = "UpperTorso" -- LowerTorso, HumanoidRootPart,Head,UpperTorso
+getgenv().AntiGroundShots = false ---- Testing Feature Lmao
+getgenv().AutoPred = false
+
+    	local Locking = true
+    local Draw = Drawing.new
+local Square = Drawing.new("Square")
+Square.Visible = true
+Square.Color = Color3.fromRGB(255, 255, 255)
+Square.Thickness = 5
+Square.Size = Vector2.new(6,6)
+Square.Filled = true
+
+game:GetService("UserInputService").InputBegan:Connect(function(keygo,ok)
+           if (not ok) then
+           if (keygo.KeyCode == getgenv().Key) then
+               Locking = not Locking
+               if Locking then
+               Plr =  getClosestPlayerToCursor()
+elseif not Locking then
+        
+end
+end
+end
+end)
+	function getClosestPlayerToCursor()
+		local closestPlayer
+		local shortestDistance = math.huge
+
+if getgenv().AutoPred == true then
+    local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+    local split = string.split(pingvalue,'(')
+    local ping = tonumber(split[1])
+    if ping < 360 then
+        getgenv().Prediction = 0.16537
+    elseif ping < 280 then
+        getgenv().Prediction = 0.16780
+    elseif ping < 270 then
+        getgenv().Prediction = 0.195566
+    elseif ping < 260 then
+        getgenv().Prediction = 0.175566
+    elseif ping < 250 then
+        getgenv().Prediction = 0.1651
+    elseif ping < 240 then
+        getgenv().Prediction = 0.16780
+    elseif ping < 230 then
+        getgenv().Prediction = 0.15692
+    elseif ping < 220 then
+        getgenv().Prediction = 0.165566
+    elseif ping < 210 then
+        getgenv().Prediction = 0.165566
+    elseif ping < 200 then
+        getgenv().Prediction = 0.16942
+    elseif ping < 190 then
+        getgenv().Prediction = 0.166547
+    elseif ping < 180 then
+        getgenv().Prediction = 0.19284
+    elseif ping < 170 then
+        getgenv().Prediction = 0.1923111
+    elseif ping < 160 then
+        getgenv().Prediction = 0.16
+    elseif ping < 150 then
+        getgenv().Prediction = 0.15
+    elseif ping < 140 then
+        getgenv().Prediction = 0.14
+    elseif ping < 130 then
+        getgenv().Prediction = 0.156692
+    elseif ping < 120 then
+        getgenv().Prediction = 0.143765
+    elseif ping < 110 then
+        getgenv().Prediction = 0.143765
+    elseif ping < 100 then
+        getgenv().Prediction = 0.1455
+    elseif ping < 90 then
+        getgenv().Prediction = 0.135
+    elseif ping < 80 then
+        getgenv().Prediction = 0.1347
+    elseif ping < 70 then
+        getgenv().Prediction = 0.119
+    elseif ping < 60 then
+        getgenv().Prediction = 0.12731
+    elseif ping < 50 then
+        getgenv().Prediction = 0.127668
+    elseif ping < 40 then
+        getgenv().Prediction = 0.125
+    elseif ping < 30 then
+        getgenv().Prediction = 0.11
+    elseif ping < 20 then
+        getgenv().Prediction = 0.12588
+    elseif ping < 10 then
+        getgenv().Prediction = 0.9
+    end
+end
+
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild("LowerTorso") then
+				local pos =  game:GetService"Workspace".CurrentCamera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+				local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new( game.Players.LocalPlayer:GetMouse().X,  game.Players.LocalPlayer:GetMouse().Y)).magnitude
+				if magnitude < shortestDistance then
+					closestPlayer = v
+					shortestDistance = magnitude
+				end
+			end
+		end
+		return closestPlayer
+	end
+
+	local rawmetatable = getrawmetatable(game)
+	local old = rawmetatable.__namecall
+	setreadonly(rawmetatable, false)
+	rawmetatable.__namecall = newcclosure(function(...)
+		local args = {...}
+		if Locking and getnamecallmethod() == "FireServer" and args[2] == "UpdateMousePos" then
+			args[3] = Plr.Character[getgenv().Partz].Position+(Plr.Character[getgenv().Partz].Velocity*Prediction)
+			return old(unpack(args))
+		end
+		return old(...)
+	end)
+	
+	
+game.RunService.Stepped:Connect(function()
+    if Plr ~= nil and Locking then
+         local Vector, OnScreen = workspace.CurrentCamera:worldToViewportPoint(Plr.Character[getgenv().Partz].Position+(Plr.Character[getgenv().Partz].Velocity*Prediction))
+         if OnScreen then
+        Square.Visible = true
+        Square.Position = Vector2.new(Vector.X,Vector.Y)
+        end
+        elseif not Locking then
+            Square.Visible = false
+        end
+        
+end)
+
+if getgenv().AntiGroundShots == true then
+				pcall(function()
+                    local TargetVelv5 = Plr.Character[getgenv().Partz]
+                    TargetVelv5.Velocity = Vector3.new(TargetVelv5.Velocity.X, (TargetVelv5.Velocity.Y * 0.5), TargetVelv5.Velocity.Z)
+                    TargetVelv5.AssemblyLinearVelocity = Vector3.new(TargetVelv5.Velocity.X, (TargetVelv5.Velocity.Y * 0.5), TargetVelv5.Velocity.Z)
+                end)
+
+Section:NewButton("macro tools", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/t8JfiugV"))()
+end)
+
+Section:NewButton("something", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/NiTyPRw1"))()
+end)
+
+Section:NewButton("anti fling", "ButtonInfo", function()
+    local localPlayer = game:GetService('Players').LocalPlayer;
+                local localCharacter = localPlayer.Character;
+                localCharacter:FindFirstChildOfClass('Humanoid').Health = 0;
+                local newCharacter = localPlayer.CharacterAdded:Wait();
+                local spoofFolder = Instance.new('Folder');
+                spoofFolder.Name = 'FULLY_LOADED_CHAR';
+                spoofFolder.Parent = newCharacter;
+                newCharacter:WaitForChild('RagdollConstraints'):Destroy();
+                local spoofValue = Instance.new('BoolValue', newCharacter);
+                spoofValue.Name = 'RagdollConstraints';
+                local name = game.Players.LocalPlayer.Name
+                local lol =    game.Workspace:WaitForChild(name)
+                local money = Instance.new("Folder",game.Players.LocalPlayer.Character);money.Name = "FULLY_LOADED_CHAR"
+                lol.Parent = game.Workspace.Players
+                game.Players.LocalPlayer.Character:WaitForChild("BodyEffects")
+                game.Players.LocalPlayer.Character.BodyEffects.BreakingParts:Destroy()
+end)
+
+Section:NewButton("Anti Mod", "ButtonInfo", function()
+    local Nigga = {
+ 163721789,
+ 15427717,
+ 201454243,
+ 822999,
+ 63794379,
+ 17260230,
+ 28357488,
+ 93101606,
+ 8195210,
+ 89473551,
+ 16917269,
+ 85989579,
+ 1553950697,
+ 476537893,
+ 155627580,
+ 31163456,
+ 7200829,
+ 25717070,
+ 201454243,
+ 15427717,
+ 63794379,
+ 16138978,
+ 60660789,
+ 17260230,
+ 16138978,
+ 1161411094,
+ 9125623,
+ 11319153,
+ 34758833,
+ 194109750,
+ 35616559,
+ 1257271138,
+ 28885841,
+ 23558830,
+ 25717070,
+
+ 
+}
+
+for l, c in pairs(game.Players:GetChildren()) do
+for i, v in pairs(Nigga) do
+if c.UserId == v then
+local Vanis = game.Players.LocalPlayer
+Vanis:Kick("Hoe Detected")
+end
+end
+end
+game.Players.PlayerAdded:Connect(function(plr)
+for i, v in pairs(bitch) do
+if plr.UserId == v then
+local Vanis = game.Players.LocalPlayer
+Vanis:Kick("Hoe Detected")
+end
+end
+end)
+end)
+
+Section:NewButton("kirbsware", "ButtonInfo", function()
+    loadstring(game:HttpGet("http://kirbsware.xyz/Mobile.txt"))()
+end)
